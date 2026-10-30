@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#1432d4">
+<title>Tela Livre</title>
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<main>
+  <div class="brand"><span class="mark"></span>Tela Livre</div>
+
+  <section id="home">
+    <h1>Mostre sua tela. Sem enrolação.</h1>
+    <p class="sub">Gera um código e um link na hora. Quem recebe assiste no PC ou no celular, sem instalar nada.</p>
+    <button id="startShare" class="btn big">Compartilhar minha tela</button>
+    <label class="check"><input type="checkbox" id="withAudio" checked> Incluir o áudio</label>
+    <p id="noShare" class="note" hidden>Este navegador não consegue capturar a tela (celulares não conseguem). Compartilhe de um PC; por aqui você só assiste.</p>
+    <p id="homeMsg" class="note" role="status"></p>
+
+    <div class="join">
+      <h2>Tem um código?</h2>
+      <div class="row">
+        <input id="codeIn" class="field code-in" placeholder="K7P2QM" maxlength="80" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-label="Código da transmissão">
+        <button id="watchBtn" class="btn">Assistir</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="sharing" hidden>
+    <div class="bar">
+      <span class="live">Ao vivo</span>
+      <span class="count"><b id="count">0</b> assistindo</span>
+      <button id="stopBtn" class="btn">Parar de compartilhar</button>
+    </div>
+
+    <div class="hero">
+      <div>
+        <span class="lbl">Código</span>
+        <div id="codeOut" class="code">------</div>
+        <button id="copyCode" class="btn">Copiar código</button>
+        <div id="linkBox" class="linkbox">
+          <span class="lbl">Link para assistir</span>
+          <div class="row">
+            <input id="linkOut" class="field" readonly aria-label="Link para assistir">
+            <button id="copyLink" class="btn">Copiar link</button>
+            <button id="shareNative" class="btn" hidden>Enviar</button>
+          </div>
+        </div>
+      </div>
+      <img id="qr" alt="QR code do link" hidden>
+    </div>
+
+    <details id="hostBox" hidden>
+      <summary>Endereço do site (para link e QR no celular)</summary>
+      <p class="note">Hospede o arquivo index.html (veja o LEIA-ME), cole o endereço aqui e salve. Só precisa fazer uma vez.</p>
+      <div class="row">
+        <input id="baseIn" class="field" placeholder="https://seu-site.netlify.app/" aria-label="Endereço do site">
+        <button id="saveBase" class="btn">Salvar</button>
+      </div>
+    </details>
+
+    <video id="preview" muted autoplay playsinline></video>
+  </section>
+
+  <section id="watching" hidden>
+    <div id="stage" class="stage">
+      <video id="remote" autoplay muted playsinline></video>
+      <div id="info" class="info" role="status"></div>
+    </div>
+    <div class="row controls">
+      <button id="muteBtn" class="btn">Ativar som</button>
+      <button id="fsBtn" class="btn">Tela cheia</button>
+      <button id="leaveBtn" class="btn">Sair</button>
+    </div>
+  </section>
+</main>
+<script src="lib/peerjs.min.js"></script>
+<script src="lib/qrcode.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

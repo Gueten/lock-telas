@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "Tela Livre",
+  "version": "1.0.0",
+  "description": "Compartilhe sua tela com um código ou link. Quem recebe assiste no PC ou no celular, sem instalar nada.",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Tela Livre"
+  },
+  "icons": {
+    "16": "icons/16.png",
+    "48": "icons/48.png",
+    "128": "icons/128.png"
+  }
+}

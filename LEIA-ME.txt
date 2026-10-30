@@ -1,0 +1,49 @@
+TELA LIVRE
+Compartilhe sua tela por código ou link. Quem assiste usa PC ou celular, sem instalar nada.
+
+
+COMO INSTALAR NO PC
+
+- Chrome, Brave ou Opera: abra chrome://extensions, ligue o "Modo do desenvolvedor",
+  clique em "Carregar sem compactação" e escolha esta pasta (a que tem o manifest.json).
+  No Edge o endereço é edge://extensions.
+- Firefox: abra about:debugging#/runtime/this-firefox, clique em "Carregar extensão temporária"
+  e escolha o arquivo manifest.json. (No Firefox ela some quando você fecha o navegador.)
+
+
+COMO COMPARTILHAR
+
+1. Clique no ícone da extensão e depois em "Compartilhar minha tela".
+2. Na aba que abrir, clique em "Compartilhar minha tela" de novo e escolha a tela, janela ou aba.
+3. Passe o código (ou o link/QR) pra quem vai assistir. Deixe essa aba aberta enquanto compartilha.
+
+
+COMO ASSISTIR
+
+- Com a extensão: ícone, digite o código, Assistir.
+- Sem extensão (inclui celular): abra o link ou escaneie o QR. Ou abra o site hospedado e digite o código.
+
+
+LINK E QR PARA O CELULAR (faça uma vez só)
+
+Link só funciona se existir uma página pública pra ele abrir. Ela está em site/index.html (é um arquivo só).
+
+1. Hospede esse arquivo de graça: GitHub Pages, Netlify, Cloudflare Pages ou qualquer
+   hospedagem estática com HTTPS. Ele precisa se chamar index.html.
+2. Copie o endereço do site (exemplo: https://seu-site.netlify.app/).
+3. Na tela de compartilhamento da extensão, abra "Endereço do site", cole e salve.
+
+Depois disso o link e o QR já saem prontos pro celular.
+Sem isso, só o código funciona (e só pra quem tem a extensão ou o site).
+
+
+LIMITES
+
+- Celular assiste, mas não compartilha a própria tela: os navegadores de celular não têm essa
+  função. Compartilhar do celular exige app nativo, e extensão não consegue fazer isso.
+- Quem compartilha precisa de navegador de PC (Chrome, Edge, Brave, Opera ou Firefox).
+  O áudio só vem no Chrome/Edge (da aba, ou do sistema inteiro no Windows).
+- O vídeo sai direto do seu PC pra cada pessoa. O ideal é até 3 ou 4 espectadores ao mesmo tempo.
+- Quem tem o código ou o link vê a sua tela. Não passe pra estranhos.
+- A conexão entre os aparelhos é combinada pelo servidor gratuito do PeerJS (0.peerjs.com).
+  Se ele estiver fora do ar, não conecta.
